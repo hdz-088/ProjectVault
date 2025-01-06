@@ -16,6 +16,12 @@ export default {
       maskImg: {
         "mask-image": "linear-gradient(rgb(0 0 0), rgb(0 0 0 / 0))",
       },
+      linkIcon: {
+        color: "#7c7c7c",
+        "background-color": "#1c1c1c",
+        border: "1px solid #3d3d3d91",
+        "border-radius": "7px",
+      },
     },
   },
   plugins: [],

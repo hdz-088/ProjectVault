@@ -4,26 +4,26 @@ import { SiRefinedgithub } from "react-icons/si";
 import { FaUserTie } from "react-icons/fa";
 import { IoMailOpen } from "react-icons/io5";
 import { GrLinkedinOption } from "react-icons/gr";
-import { FaYoutube } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
 
 const Links = () => {
   return (
-    <div className="p-4 gap-4 w-[90%] sm:w-[70%] md:w-[60%] border border-white text-center flex flex-row items-center justify-center text-white/80">
-      {/* Github portfolio contact linkedin youtube */}
-      <a href="#" className="text-4xl px-8 border border-1 border-white/80 ">
-        <SiRefinedgithub />
+    <div className="socials ">
+      <a href="https://github.com/hdz-088" target="_blank">
+        <SiRefinedgithub style={{ background: "#2c2c2cd5" }} />
       </a>
-      <a href="#">
-        <FaUserTie />
+
+      <a href="https://hdzala.vercel.app/" target="_blank">
+        <FaUserTie style={{ background: "#2c2c2cd5" }} />
       </a>
-      <a href="#">
-        <IoMailOpen />
+      <a href="mailto:hdz088@outlook.com" target="_blank">
+        <IoMailOpen style={{ background: "#2c2c2cd5" }} />
       </a>
-      <a href="#">
-        <GrLinkedinOption />
+      <a href="https://www.linkedin.com/in/hdz088" target="_blank">
+        <GrLinkedinOption style={{ background: "#2c2c2cd5" }} />
       </a>
-      <a href="#">
-        <FaYoutube />
+      <a href="https://instagram.com/hdz_088" target="_blank">
+        <RiInstagramFill style={{ background: "#2c2c2cd5" }} />
       </a>
     </div>
   );
