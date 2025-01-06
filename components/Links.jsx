@@ -8,7 +8,7 @@ import { RiInstagramFill } from "react-icons/ri";
 
 const Links = () => {
   return (
-    <div className="socials ">
+    <div className="socials">
       <a href="https://github.com/hdz-088" target="_blank">
         <SiRefinedgithub style={{ background: "#2c2c2cd5" }} />
       </a>

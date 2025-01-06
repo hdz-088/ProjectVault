@@ -182,25 +182,25 @@ const cardData = [
 
 const Cards = () => {
   return (
-    <div className="flex flex-col gap-6">
+    <div className="cards flex flex-col gap-6">
       {cardData.map((item, index) => (
         <div
           key={index}
-          className="flex flex-row items-center w-full border border-[#3d3d3d91] px-4 py-2 gap-10 justify-around rounded-lg bg-[#1c1c1c] transition ease-in-out duration-500 hover:bg-[#2c2c2cd5] hover:border-[#3d3d3d] group cursor-pointer"
+          className="card flex flex-row items-center w-full border border-[#3d3d3d91] px-4 py-2 gap-10 justify-around rounded-lg bg-[#1c1c1c] transition ease-in-out duration-500 hover:bg-[#2c2c2cd5] hover:border-[#3d3d3d] group cursor-pointer"
         >
           <img src={item.image} alt="icon" width={90} />
-          <div className="w-3/4 flex flex-col gap-2">
-            <p className="text-left font-bold text-xl">{item.title}</p>
-            <p className="text-white/60 text-justify text-sm font-light">
+          <div className="text w-3/4 flex flex-col gap-2">
+            <p className="title text-left font-bold text-xl">{item.title}</p>
+            <p className="desc text-white/60 text-justify text-sm font-light">
               {item.description}
             </p>
-            <div className="text-2xl flex flex-row gap-4 transition ease-in-out duration-500  opacity-40 group-hover:opacity-100">
+            <div className="tech text-2xl flex flex-row gap-4 transition ease-in-out duration-500  opacity-40 group-hover:opacity-100">
               {item.technologies.map((tech, techIndex) => (
                 <span key={techIndex}>{tech}</span>
               ))}
             </div>
           </div>
-          <div className="flex flex-col gap-6 text-2xl transition ease-in-out duration-500  opacity-40 group-hover:opacity-100">
+          <div className="links flex flex-col gap-6 text-2xl transition ease-in-out duration-500  opacity-40 group-hover:opacity-100">
             <a href={item.github} target="_blank">
               <FaGithub />
             </a>

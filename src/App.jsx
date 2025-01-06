@@ -1,6 +1,4 @@
-import { useState } from "react";
 import "./index.css";
-import { MdOutlineCopyAll } from "react-icons/md";
 import Links from "../components/Links";
 import Cards from "../components/Cards";
 
