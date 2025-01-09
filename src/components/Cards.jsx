@@ -182,25 +182,27 @@ const cardData = [
 
 const Cards = () => {
   return (
-    <div className="cards flex flex-col gap-6">
+    <div className="flex flex-col gap-6">
       {cardData.map((item, index) => (
         <div
           key={index}
-          className="card flex flex-row items-center w-full border border-[#3d3d3d91] px-4 py-2 gap-10 justify-around rounded-lg bg-[#1c1c1c] transition ease-in-out duration-500 hover:bg-[#2c2c2cd5] hover:border-[#3d3d3d] group cursor-pointer"
+          className="card flex flex-col md:flex-row items-center w-full border border-[#3d3d3d91] px-2 md:px-4 py-4 md:py-2 gap-6 md:gap-10 justify-around rounded-lg bg-[#1c1c1c] transition ease-in-out duration-500 hover:bg-[#2c2c2cd5] hover:border-[#3d3d3d] group cursor-pointer"
         >
           <img src={item.image} alt="icon" width={90} />
           <div className="text w-3/4 flex flex-col gap-2">
-            <p className="title text-left font-bold text-xl">{item.title}</p>
+            <p className="title text-center md:text-left font-bold text-xl">
+              {item.title}
+            </p>
             <p className="desc text-white/60 text-justify text-sm font-light">
               {item.description}
             </p>
-            <div className="tech text-2xl flex flex-row gap-4 transition ease-in-out duration-500  opacity-40 group-hover:opacity-100">
+            <div className="tech text-2xl flex flex-row gap-4 transition ease-in-out duration-500 opacity-40 group-hover:opacity-100">
               {item.technologies.map((tech, techIndex) => (
                 <span key={techIndex}>{tech}</span>
               ))}
             </div>
           </div>
-          <div className="links flex flex-col gap-6 text-2xl transition ease-in-out duration-500  opacity-40 group-hover:opacity-100">
+          <div className="links flex flex-row md:flex-col gap-6 text-2xl transition ease-in-out duration-500  opacity-40 group-hover:opacity-100">
             <a href={item.github} target="_blank">
               <FaGithub />
             </a>
