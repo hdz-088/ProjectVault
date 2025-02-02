@@ -69,6 +69,18 @@ const cardData = [
     externalLink: "https://hdzala.vercel.app/",
   },
   {
+    title: "Diwali Sales Analysis",
+    description:
+      "Performed data cleaning & EDA on Diwali sales to genrate report on shopping trend",
+    image: "/jupyter.png",
+    technologies: [
+      <FaPython style={{ fill: "#ffd545" }} />,
+      <SiJupyter style={{ fill: "#f37726" }} />,
+    ],
+    github: "https://github.com/hdz-088/Diwali-Sales-Analysis",
+    externalLink: "https://github.com/hdz-088/Diwali-Sales-Analysis",
+  },
+  {
     title: "myISRO (Working)",
     description:
       "A fan made site for ISRO. It is still under construction. Made by using NextJS, Tailwind CSS.",
@@ -186,7 +198,7 @@ const Cards = () => {
       {cardData.map((item, index) => (
         <div
           key={index}
-          className="card flex flex-col md:flex-row items-center w-full border border-[#3d3d3d91] px-2 md:px-4 py-4 md:py-2 gap-6 md:gap-10 justify-around rounded-lg bg-[#1c1c1c] transition ease-in-out duration-500 hover:bg-[#2c2c2cd5] hover:border-[#3d3d3d] group cursor-pointer"
+          className="card flex flex-col md:flex-row items-center w-full border border-[#3d3d3d91] px-2 md:px-4 py-4 md:py-2 gap-6 md:gap-10 justify-around rounded-lg bg-[#1c1c1c] transition ease-in-out duration-500 hover:bg-[#2c2c2cd5] hover:border-[#3d3d3d] group cursor-pointer appear"
         >
           <img src={item.image} alt="icon" width={90} />
           <div className="text w-3/4 flex flex-col gap-2">
