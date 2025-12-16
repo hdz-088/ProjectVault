@@ -194,33 +194,61 @@ const cardData = [
 
 const Cards = () => {
   return (
-    <div className="flex flex-col gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {cardData.map((item, index) => (
         <div
           key={index}
-          className="card flex flex-col md:flex-row items-center w-full border border-[#3d3d3d91] px-2 md:px-4 py-4 md:py-2 gap-6 md:gap-10 justify-around rounded-lg bg-[#1c1c1c] transition ease-in-out duration-500 hover:bg-[#2c2c2cd5] hover:border-[#3d3d3d] group cursor-pointer appear"
+          className="glass glass-hover group flex flex-col p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 h-full"
         >
-          <img src={item.image} alt="icon" width={90} />
-          <div className="text w-3/4 flex flex-col gap-2">
-            <p className="title text-center md:text-left font-bold text-xl">
-              {item.title}
-            </p>
-            <p className="desc text-white/60 text-justify text-sm font-light">
-              {item.description}
-            </p>
-            <div className="tech text-2xl flex flex-row gap-4 transition ease-in-out duration-500 opacity-40 group-hover:opacity-100">
-              {item.technologies.map((tech, techIndex) => (
-                <span key={techIndex}>{tech}</span>
-              ))}
+          {/* Header with Icon and Links */}
+          <div className="flex items-start justify-between mb-6">
+            <div className="p-3 bg-white/5 rounded-xl border border-white/5 group-hover:border-white/10 transition-colors shadow-lg">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-10 h-10 object-contain"
+              />
+            </div>
+            <div className="flex gap-2">
+              <a
+                href={item.github}
+                target="_blank"
+                rel="noreferrer"
+                className="p-2 rounded-full hover:bg-white/10 text-white/40 hover:text-white transition-colors"
+                title="View Source"
+              >
+                <FaGithub size={18} />
+              </a>
+              <a
+                href={item.externalLink}
+                target="_blank"
+                rel="noreferrer"
+                className="p-2 rounded-full hover:bg-white/10 text-white/40 hover:text-white transition-colors"
+                title="Live Demo"
+              >
+                <FiExternalLink size={18} />
+              </a>
             </div>
           </div>
-          <div className="links flex flex-row md:flex-col gap-6 text-2xl transition ease-in-out duration-500  opacity-40 group-hover:opacity-100">
-            <a href={item.github} target="_blank">
-              <FaGithub />
-            </a>
-            <a href={item.externalLink} target="_blank">
-              <FiExternalLink />
-            </a>
+
+          {/* Content */}
+          <h3 className="text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">
+            {item.title}
+          </h3>
+          <p className="text-sm text-center md:text-left text-white/60 font-light leading-relaxed mb-6 flex-1">
+            {item.description}
+          </p>
+
+          {/* Tech Stack */}
+          <div className="pt-4 border-t border-white/5 flex flex-wrap gap-3 text-xl text-white/30">
+            {item.technologies.map((tech, techIndex) => (
+              <span
+                key={techIndex}
+                className="hover:text-white/80 transition-colors"
+              >
+                {tech}
+              </span>
+            ))}
           </div>
         </div>
       ))}

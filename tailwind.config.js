@@ -8,23 +8,20 @@ export default {
   theme: {
     extend: {
       fontFamily: { Inter: ["Inter", "serif"] },
-      backgroundImage: {
-        "radial-pattern": `radial-gradient(circle at center, rgba(254, 254, 254, 0.189) 0.05rem, transparent 0)`,
+      animation: {
+        'fade-in-down': 'fade-in-down 1s ease-out',
       },
-      backgroundSize: {
-        "custom-small": "0.5rem 0.5rem",
-      },
-      backgroundPosition: {
-        "custom-offset": "0 0, 0.35rem 0.35rem",
-      },
-      maskImg: {
-        "mask-image": "linear-gradient(rgb(0 0 0), rgb(0 0 0 / 0))",
-      },
-      linkIcon: {
-        color: "#7c7c7c",
-        "background-color": "#1c1c1c",
-        border: "1px solid #3d3d3d91",
-        "border-radius": "7px",
+      keyframes: {
+        'fade-in-down': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(-20px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
       },
     },
   },
